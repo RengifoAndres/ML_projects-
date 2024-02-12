@@ -10,10 +10,9 @@ p_load(tidyverse, # contiene las librer?as ggplot, dplyr...
        rvest) # web-scraping
 
 
-# primeros pasos con rvest
+# First Steps with rvest
 
-
-# rvest has several functions.
+# rvest has several functions that can help us to .
 
 # read_read_html 
 
