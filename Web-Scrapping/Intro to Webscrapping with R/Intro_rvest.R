@@ -12,8 +12,8 @@ p_load(tidyverse, # contiene las librer?as ggplot, dplyr...
 
 # primeros pasos con rvest
 
-# rvest has several functions.
 
+# rvest has several functions.
 
 # read_read_html 
 
