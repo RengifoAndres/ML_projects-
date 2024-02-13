@@ -24,9 +24,8 @@ my_html = read_html(my_url) ## leer el html de la p?gina
 ##open the page
 browseURL(my_url)
 
-## obtengamos el titulo de la p?gina usando funciones simples de 
-## rvest. 
 
+## Function html_elements. 
 
 div<- my_html %>% html_elements("div") %>%
   html_elements("a") %>%
