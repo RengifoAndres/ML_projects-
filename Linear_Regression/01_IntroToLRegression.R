@@ -15,15 +15,15 @@ p_load(tidyverse,
 
 ## load data
 db <- import("https://github.com/ignaciomsarmiento/datasets/blob/main/GEIH_sample1.Rds?raw=true")
-db <- as_tibble(db) %>% rename(gender=sex) 
+
+db <- as_tibble(db) %>% rename(gender=sex) %>%
+                        rename(ocupation= oficio)
 
 
-
-# 
 
 db_of<- db %>% 
   group_by(oficio, gender)  %>% 
   summarise(ofic_ingLab= mean(y_ingLab_m, na.rm=T), .groups="drop") %>%
-  mutate(ofic_ingLab= ofic_ingLab/1000000)
+  mutate(ofic_ingLab= ofic_ingLab/1000)
 
-db_of  %>% dplyr:: select(oficio, gender, ofic_ingLab) %>% head(4)
+db_of  %>% dplyr:: select(ocupation, gender, ofic_ingLab) %>% head(4)
