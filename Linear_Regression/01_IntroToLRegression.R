@@ -6,8 +6,8 @@ library(pacman)
 
 
 p_load(tidyverse, 
+       skimr,
       rio)
-
 
 ### load the data
 
@@ -15,8 +15,7 @@ p_load(tidyverse,
 
 ## load data
 db <- import("https://github.com/ignaciomsarmiento/datasets/blob/main/GEIH_sample1.Rds?raw=true")
-db <- as_tibble(db) %>% rename(gender=sex) %>%
-                        rename(ocu= ocupation)
+db <- as_tibble(db) %>% rename(gender=sex) 
 
 
 
