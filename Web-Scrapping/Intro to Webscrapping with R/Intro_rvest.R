@@ -18,13 +18,13 @@ p_load(tidyverse, # contiene las librer?as ggplot, dplyr...
 
 my_url = "https://quotes.toscrape.com/"
 
-# request el HTML de la p?gina a R. 
-my_html = read_html(my_url) ## leer el html de la p?gina
+# save the HTML into our enviroment. 
+my_html = read_html(my_url) ## read html.
 
 ##open the page
 browseURL(my_url)
 
-## obtengamos el titulo de la p?gina usando funciones simples de 
+
 ## rvest. 
 
 
