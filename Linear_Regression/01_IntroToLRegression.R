@@ -6,7 +6,7 @@ library(pacman)
 
 
 p_load(tidyverse, 
-      skim)
+      rio)
 
 
 ### load the data
@@ -19,3 +19,11 @@ db <- as_tibble(db) %>% rename(gender=sex)
 
 
 
+# 
+
+db_of<- db %>% 
+  group_by(oficio, gender)  %>% 
+  summarise(ofic_ingLab= mean(y_ingLab_m, na.rm=T), .groups="drop") %>%
+  mutate(ofic_ingLab= ofic_ingLab/1000000)
+
+db_of  %>% dplyr:: select(oficio, gender, ofic_ingLab) %>% head(4)
