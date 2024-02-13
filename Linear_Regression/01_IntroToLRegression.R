@@ -4,4 +4,7 @@
 
 library(pacman)
 
-p_load(tidyverse)
+p_load(tidyverse, 
+      skim)
+
+
