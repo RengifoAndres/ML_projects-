@@ -62,6 +62,7 @@ db_int<- db_int %>% drop_na(any_of(features))
 
 ## Regression
 linear_model<- lm(totalHoursWorked ~  nmenores  +  nmenores*gender + H_Head + age + gender, data=db_int  )
+
 summary(linear_model)
 
 
