@@ -25,8 +25,8 @@ my_html = read_html(my_url) ## read html.
 browseURL(my_url)
 
 
-## rvest. 
 
+## Function html_elements. 
 
 div<- my_html %>% html_elements("div") %>%
   html_elements("a") %>%
